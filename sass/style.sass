@@ -1,39 +1,70 @@
-// 1Kb CSS grid (fluid)
-.grid_1
-  width: 6.25% // 60
-.grid_2
-  width: 14.583% // 140
-.grid_3
-  width: 22.917% // 220
-.grid_4
-  width: 31.25% // 300
-.grid_5
-  width: 41.667% // 380
-.grid_6
-  width: 47.917% // 460
-.grid_7
-  width: 56.25% // 540
-.grid_8
-  width: 64.583% // 620
-.grid_9
-  width: 72.917% // 700
-.grid_10
-  width: 81.25% // 780
-.grid_11
-  width: 89.583% // 860
-.grid_12
-  width: 97.917% // 940
+//Toast Framework - grid.css
+.wrap
+  max-width: 940px
+  padding: 10px
+  margin: 0 auto
 
-.column
-  margin: 0 1.04%
+.grids
+  width: auto
+  max-width: 960px
+  margin: 0 0 0 -1.7%
+  list-style: none
   overflow: hidden
-  float: left
+  letter-spacing: -0.25em
+  [class*="grid-"]
+    display: inline-block
+    margin: 0 0 0 1.7%
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    vertical-align: top
+    letter-spacing: 0
 
-.row
-  min-width: 960px
-  width: 97.875%
-  margin: 0 1.064%
-  overflow: hidden
+.grid-1
+  width: 6.15%
+
+.grid-2
+  width: 14.583%
+
+.grid-3
+  width: 22.917%
+
+.grid-4, .grid-one-third
+  width: 31.25%
+
+.grid-5
+  width: 39.583%
+
+.grid-6, .grid-half
+  width: 47.917%
+
+.grid-7
+  width: 56.25%
+
+.grid-8, .grid-two-thirds
+  width: 64.583%
+
+.grid-9
+  width: 72.917%
+
+.grid-10
+  width: 81.25%
+
+.grid-11
+  width: 89.583%
+
+.grid-12
+  width: 97.917%
+  margin: 0
+
+@media screen and (max-width: 700px)
+  .grids
+    margin: 0
+    width: auto
+    [class*="grid-"]
+      display: block
+      width: auto
+      margin: 0
 
 span.icon
   font-family: HeydingsCommonIcons
@@ -45,3 +76,139 @@ span.icon
   src: url('heydings_icons-webfont.eot?#iefix') format("embedded-opentype"), url('heydings_icons-webfont.woff') format("woff"), url('heydings_icons-webfont.ttf') format("truetype"), url('heydings_icons-webfont.svg#HeydingsCommonIconsRegular') format("svg")
   font-weight: normal
   font-style: normal
+
+// Bootstrap Typo
+// Bootstrap v2.0.4 * Copyright 2012 Twitter, Inc * Licensed under the Apache License v2.0 * http://www.apache.org/licenses/LICENSE-2.0 * Designed and built with all the love in the world @twitter by @mdo and @fat.
+.clearfix
+  *zoom: 1
+  &:before
+    display: table
+    content: ""
+  &:after
+    display: table
+    content: ""
+    clear: both
+
+.hide-text
+  font: 0 / 0 a
+  color: transparent
+  text-shadow: none
+  background-color: transparent
+  border: 0
+
+.input-block-level
+  display: block
+  width: 100%
+  min-height: 28px
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -ms-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  margin: 0
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-size: 16px
+  line-height: 20px
+  color: #333333
+  background-color: #ffffff
+
+a
+  color: #0088cc
+  text-decoration: none
+  &:hover
+    color: #005580
+    text-decoration: underline
+
+.container
+  margin-right: auto
+  margin-left: auto
+  *zoom: 1
+  &:before
+    display: table
+    content: ""
+  &:after
+    display: table
+    content: ""
+    clear: both
+
+.container-fluid
+  padding-right: 20px
+  padding-left: 20px
+  *zoom: 1
+  &:before
+    display: table
+    content: ""
+  &:after
+    display: table
+    content: ""
+    clear: both
+
+// Colors
+$white: #fff
+$black: #000
+$grey: #666
+
+// Honey Pot Color Scheme from https://kuler.adobe.com/index.cfm#themeID/1490158
+$blue: #105B63
+$bright: #FFFAD5 
+$yellow: #FFD34E
+$orange: #DB9E36
+$red: #BD4932
+
+
+// Main styling information
+body
+  background: $red url('bg.png') fixed
+  color: $blue
+
+a
+  text-decoration: none
+  font-weight: bold
+  color: $blue
+  &:hover
+    text-decoration: none
+    color: $red
+
+.wrap
+  padding-top: 0
+  background: $bright
+  border: 2px solid $yellow
+  border-top: none
+  -webkit-border-radius: 0px 0px 7px 7px
+  moz-border-radius: 0px 0px 7px 7px
+  border-radius: 0px 0px 7px 7px
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  margin-bottom: 30px
+
+.dashed
+  border-bottom: 1px dashed $blue
+  margin-bottom: 1em
+
+h1, h2, h3
+  color: $red
+  a
+    color: $red
+    &:hover
+      color: $blue
+
+header 
+  text-align: center
+  h1
+    font-size: 3em
+    display: inline-block
+    padding-left: 96px
+    padding-top: 20px
+    margin-top: 0
+    line-height: 96px
+    background: url('logo.png') no-repeat top left
+    margin-bottom: 0
+
+footer
+  font-size: 0.8em
+  p
+    margin-bottom: 0
+  .grid-3.twitter
+    margin-top: 10px
