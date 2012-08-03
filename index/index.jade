@@ -48,8 +48,7 @@ html
               | {{/is_pdf}}
 
               | {{#is_image}}
-              span.icon I
-              img(src="{{file_link}}", title="{{original_filename}}")
+              img(src="{{file_link}}", title="{{original_filename}}", class="bordered")
               | {{/is_image}}
 
               | {{#is_video}}
@@ -63,7 +62,7 @@ html
               | {{#is_unknown_type}}
               span.icon *
               | {{/is_unknown_type}}
-          .grid-12
+          //-.grid-12
             ul
               li Original filename: {{original_filename}}
               li Relative link to file: {{file_link}}
